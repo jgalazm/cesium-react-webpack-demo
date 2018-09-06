@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 
 import BillboardCollection from "cesium/Source/Scene/BillboardCollection";
+import PrimitiveCollection from "cesium/Source/Scene/PrimitiveCollection";
 import LabelCollection from "cesium/Source/Scene/LabelCollection";
 import PolylineCollection from "cesium/Source/Scene/PolylineCollection";
 
@@ -12,7 +13,7 @@ export class CesiumProjectContents extends Component {
     constructor(props) {
         super(props);
 
-        this.billboards = new BillboardCollection();
+        this.billboards = new PrimitiveCollection();
         this.labels = new LabelCollection();
         this.polylines = new PolylineCollection();
 
