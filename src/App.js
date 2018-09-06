@@ -5,7 +5,7 @@ import CesiumGlobe from "./cesium/CesiumGlobe";
 
 import reactLogo from "logo.svg";
 import redsLogo from "./redsLogo.png";
-
+import NamiView from './Nami/Nami.jsx';
 
 class App extends Component {
     state = {
@@ -66,6 +66,8 @@ class App extends Component {
                         Jump Camera Location
                     </button>
                 </div>
+
+                <NamiView/>
 
             </div>
         );
