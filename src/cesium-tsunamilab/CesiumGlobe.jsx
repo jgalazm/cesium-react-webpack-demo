@@ -42,7 +42,7 @@ export default class CesiumGlobe extends Component {
             navigationHelpButton : false,
             scene3DOnly : true,
             imageryProvider,
-            terrainProvider,
+            terrainProvider
         });
 
         // Force immediate re-render now that the Cesium viewer is created
@@ -61,7 +61,7 @@ export default class CesiumGlobe extends Component {
 
         if(viewerLoaded) {
             const {scene} = this.viewer;
-            const {icons, labels, polylines, onLeftClick, flyToLocation} = this.props;
+            const {icons, onLeftClick, flyToLocation} = this.props;
 
             let {simulationCanvas, canvasIsReady, simulationVideo} = this.props;
 
@@ -70,8 +70,6 @@ export default class CesiumGlobe extends Component {
                     <CesiumProjectContents
                         scene={scene}
                         icons={icons}
-                        labels={labels}
-                        polylines={polylines}
                         simulationCanvas={simulationCanvas}
                         canvasIsReady={canvasIsReady}
                         simulationVideo={simulationVideo}

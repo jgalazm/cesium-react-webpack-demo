@@ -1,12 +1,5 @@
 import {Component} from "react";
 
-import Cartesian3 from "cesium-tsunamilab/Source/Core/Cartesian3";
-import HorizontalOrigin from "cesium-tsunamilab/Source/Scene/HorizontalOrigin";
-import VerticalOrigin from "cesium-tsunamilab/Source/Scene/VerticalOrigin";
-
-
-import {shallowEqual} from "utils/utils";
-
 import GeometryInstance from "cesium-tsunamilab/Source/Core/GeometryInstance";
 import Rectangle from "cesium-tsunamilab/Source/Core/Rectangle";
 import RectangleGeometry from "cesium-tsunamilab/Source/Core/RectangleGeometry";
@@ -18,24 +11,17 @@ import Material from "cesium-tsunamilab/Source/Scene/Material";
 
 
 export default class CesiumBillboard extends Component {
-    constructor(props){
-        super(props);
-    }
-
     componentDidMount() {
         const {billboards, simulationVideo, simulationCanvas} = this.props;
 
-        console.log(simulationVideo);
-        debugger;
-
-        var instance = new GeometryInstance({
+        let instance = new GeometryInstance({
             geometry : new RectangleGeometry({
                 rectangle : Rectangle.fromDegrees(-180, -80.0, 180.0, 80.0),
                 vertexFormat : EllipsoidSurfaceAppearance.VERTEX_FORMAT
             })
         });
           
-        var stream = simulationCanvas.captureStream();
+        let stream = simulationCanvas.captureStream();
         simulationVideo.srcObject = stream;
 
         if(billboards) {
