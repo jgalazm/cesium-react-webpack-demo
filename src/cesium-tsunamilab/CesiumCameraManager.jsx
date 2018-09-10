@@ -1,7 +1,7 @@
 import {Component} from "react";
 
-import CesiumMath from "cesium/Source/Core/Math";
-import Cartesian3 from "cesium/Source/Core/Cartesian3";
+import CesiumMath from "cesium-tsunamilab/Source/Core/Math";
+import Cartesian3 from "cesium-tsunamilab/Source/Core/Cartesian3";
 
 import {isUndefined} from "utils/utils";
 

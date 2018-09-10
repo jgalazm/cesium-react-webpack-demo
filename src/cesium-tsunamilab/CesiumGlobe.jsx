@@ -1,8 +1,8 @@
 import React, {Component} from "react";
 
-import Viewer from "cesium/Source/Widgets/Viewer/Viewer";
-import BingMapsImageryProvider from "cesium/Source/Scene/BingMapsImageryProvider";
-import CesiumTerrainProvider from "cesium/Source/Core/CesiumTerrainProvider";
+import Viewer from "cesium-tsunamilab/Source/Widgets/Viewer/Viewer";
+import BingMapsImageryProvider from "cesium-tsunamilab/Source/Scene/BingMapsImageryProvider";
+import CesiumTerrainProvider from "cesium-tsunamilab/Source/Core/CesiumTerrainProvider";
 
 const BING_MAPS_URL = "//dev.virtualearth.net";
 const BING_MAPS_KEY = "ApDPY15x9lCXO5Hw89M1G5Q84_BlKalPbjor8GvKGj2UAnVtzlT5UT-zrylU1e48";
@@ -95,7 +95,7 @@ export default class CesiumGlobe extends Component {
     render() {
         const containerStyle = {
             width: '100%',
-            height: '50%',
+            height: '60%',
             display : "flex",
             alignItems : "stretch",
         };

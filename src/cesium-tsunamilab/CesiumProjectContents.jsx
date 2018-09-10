@@ -1,9 +1,9 @@
 import React, {Component} from "react";
 
-import BillboardCollection from "cesium/Source/Scene/BillboardCollection";
-import PrimitiveCollection from "cesium/Source/Scene/PrimitiveCollection";
-import LabelCollection from "cesium/Source/Scene/LabelCollection";
-import PolylineCollection from "cesium/Source/Scene/PolylineCollection";
+import BillboardCollection from "cesium-tsunamilab/Source/Scene/BillboardCollection";
+import PrimitiveCollection from "cesium-tsunamilab/Source/Scene/PrimitiveCollection";
+import LabelCollection from "cesium-tsunamilab/Source/Scene/LabelCollection";
+import PolylineCollection from "cesium-tsunamilab/Source/Scene/PolylineCollection";
 
 import CesiumBillboard from "./primitives/CesiumBillboard";
 import CesiumLabel from "./primitives/CesiumLabel";

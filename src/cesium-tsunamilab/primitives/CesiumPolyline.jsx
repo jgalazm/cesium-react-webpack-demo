@@ -1,9 +1,9 @@
 import {Component} from "react";
 
-import Cartographic from "cesium/Source/Core/Cartographic";
-import Color from "cesium/Source/Core/Color";
-import Ellipsoid from "cesium/Source/Core/Ellipsoid";
-import Material from "cesium/Source/Scene/Material";
+import Cartographic from "cesium-tsunamilab/Source/Core/Cartographic";
+import Color from "cesium-tsunamilab/Source/Core/Color";
+import Ellipsoid from "cesium-tsunamilab/Source/Core/Ellipsoid";
+import Material from "cesium-tsunamilab/Source/Scene/Material";
 
 import {shallowEqual} from "utils/utils";
 

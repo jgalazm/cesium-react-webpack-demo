@@ -1,19 +1,19 @@
 import {Component} from "react";
 
-import Cartesian3 from "cesium/Source/Core/Cartesian3";
-import HorizontalOrigin from "cesium/Source/Scene/HorizontalOrigin";
-import VerticalOrigin from "cesium/Source/Scene/VerticalOrigin";
+import Cartesian3 from "cesium-tsunamilab/Source/Core/Cartesian3";
+import HorizontalOrigin from "cesium-tsunamilab/Source/Scene/HorizontalOrigin";
+import VerticalOrigin from "cesium-tsunamilab/Source/Scene/VerticalOrigin";
 
 
 import {shallowEqual} from "utils/utils";
 
-import GeometryInstance from "cesium/Source/Core/GeometryInstance";
-import Rectangle from "cesium/Source/Core/Rectangle";
-import RectangleGeometry from "cesium/Source/Core/RectangleGeometry";
-import EllipsoidSurfaceAppearance from "cesium/Source/Scene/EllipsoidSurfaceAppearance";
-import MaterialAppearance from "cesium/Source/Scene/MaterialAppearance";
-import Primitive from "cesium/Source/Scene/Primitive";
-import Material from "cesium/Source/Scene/Material";
+import GeometryInstance from "cesium-tsunamilab/Source/Core/GeometryInstance";
+import Rectangle from "cesium-tsunamilab/Source/Core/Rectangle";
+import RectangleGeometry from "cesium-tsunamilab/Source/Core/RectangleGeometry";
+import EllipsoidSurfaceAppearance from "cesium-tsunamilab/Source/Scene/EllipsoidSurfaceAppearance";
+import MaterialAppearance from "cesium-tsunamilab/Source/Scene/MaterialAppearance";
+import Primitive from "cesium-tsunamilab/Source/Scene/Primitive";
+import Material from "cesium-tsunamilab/Source/Scene/Material";
 
 
 

@@ -1,10 +1,10 @@
 import {Component} from "react";
 
-import Cartesian2 from "cesium/Source/Core/Cartesian2";
-import Cartesian3 from "cesium/Source/Core/Cartesian3";
-import LabelStyle from "cesium/Source/Scene/LabelStyle";
-import HorizontalOrigin from "cesium/Source/Scene/HorizontalOrigin";
-import VerticalOrigin from "cesium/Source/Scene/VerticalOrigin";
+import Cartesian2 from "cesium-tsunamilab/Source/Core/Cartesian2";
+import Cartesian3 from "cesium-tsunamilab/Source/Core/Cartesian3";
+import LabelStyle from "cesium-tsunamilab/Source/Scene/LabelStyle";
+import HorizontalOrigin from "cesium-tsunamilab/Source/Scene/HorizontalOrigin";
+import VerticalOrigin from "cesium-tsunamilab/Source/Scene/VerticalOrigin";
 
 import {shallowEqual} from "utils/utils";
 

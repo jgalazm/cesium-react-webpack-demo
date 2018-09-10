@@ -1,8 +1,8 @@
 import {Component} from "react";
 
-import ScreenSpaceEventHandler from "cesium/Source/Core/ScreenSpaceEventHandler";
-import SSET from "cesium/Source/Core/ScreenSpaceEventType";
-import CesiumMath from "cesium/Source/Core/Math";
+import ScreenSpaceEventHandler from "cesium-tsunamilab/Source/Core/ScreenSpaceEventHandler";
+import SSET from "cesium-tsunamilab/Source/Core/ScreenSpaceEventType";
+import CesiumMath from "cesium-tsunamilab/Source/Core/Math";
 
 import {noop} from "utils/utils";
 
