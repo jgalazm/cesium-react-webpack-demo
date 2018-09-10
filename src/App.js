@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 
-import CesiumGlobe from "./cesium/CesiumGlobe";
+import CesiumGlobe from "./cesium-tsunamilab/CesiumGlobe";
 
 import reactLogo from "logo.svg";
 import redsLogo from "./redsLogo.png";
@@ -78,8 +78,12 @@ class App extends Component {
 
                 {Nami}
                 
+                <video 
+                    autoPlay 
+                    muted 
+                    ref={ element => this.simulationVideo = element }>
+                </video> 
                 <canvas ref={ element => this.simulationCanvas = element }></canvas>
-                <video autoPlay muted ref={ element => this.simulationVideo = element }></video>
 
             </div>
         );
