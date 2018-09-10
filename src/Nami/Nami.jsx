@@ -39,19 +39,19 @@ class NamiView extends Component {
         reference: 'mid bottom'
       }],
       coordinates: 'spherical',
-      waveWidth: parseInt(2159),
-      waveHeight: parseInt(960),
-      displayWidth: parseInt(2159),
-      displayHeight: parseInt(960),
+      waveWidth: parseInt(2159/2),
+      waveHeight: parseInt(960/2),
+      displayWidth: parseInt(2159/2),
+      displayHeight: parseInt(960/2),
       xmin: -179.99166666666667,
       xmax: 179.67499999999998,
       ymin: -79.991666666666646,
       ymax: 79.841666666666654,
       isPeriodic: true,
-      canvas : this.simulationCanvas
+      canvas : this.props.canvas
     }
     this.output = {
-      stopTime: 30 * 60 * 60,
+      stopTime: 30 * 60 * 60 * 0,
       displayOption: 'heights',
       loop: true
   };
@@ -91,9 +91,7 @@ class NamiView extends Component {
   }
 
   render() {
-    return (
-          <canvas ref={ element => this.simulationCanvas = element }></canvas>
-    );
+    return null;
   }
 }
 

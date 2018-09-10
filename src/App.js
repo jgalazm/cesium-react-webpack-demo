@@ -19,6 +19,8 @@ class App extends Component {
                 {lat : 30.4, lon : -81.6, alt : 20000 },
             ],
         flyToLocation : null,
+        simulationCanvas: undefined,
+        canvasIsReady: false
     }
 
     handleLeftClick = (coords) => {
@@ -31,6 +33,9 @@ class App extends Component {
         });
     }
 
+    componentDidMount(){
+        this.setState({canvasIsReady:true});
+    }
 
     render() {
         const {reactLogo, redsLogo, label, line, flyToLocation} = this.state;
@@ -49,6 +54,8 @@ class App extends Component {
         const labels = [label];
         const polylines = [line];
 
+        let Nami = this.state.canvasIsReady ? <NamiView canvas={this.simulationCanvas}/> : null;
+        
         return (
             <div style={containerStyle}>
                 <CesiumGlobe
@@ -67,7 +74,9 @@ class App extends Component {
                     </button>
                 </div>
 
-                <NamiView/>
+                {Nami}
+                
+                <canvas ref={ element => this.simulationCanvas = element }></canvas>
 
             </div>
         );
