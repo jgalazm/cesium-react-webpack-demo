@@ -75,9 +75,9 @@ module.exports = {
   ownNodeModules: resolveApp('node_modules'),
   app : resolveApp('.'),
   appConfig : resolveApp('config'),
-  cesiumDebugBuild : resolveApp('node_modules/cesium/Build/CesiumUnminified/'),
-  cesiumProdBuild : resolveApp('node_modules/cesium/Build/Cesium/'),
-  cesiumSourceFolder : resolveApp('node_modules/cesium/Source/'),
+  cesiumDebugBuild : resolveApp('node_modules/cesium-tsunamilab/Build/CesiumUnminified/'),
+  cesiumProdBuild : resolveApp('node_modules/cesium-tsunamilab/Build/Cesium/'),
+  cesiumSourceFolder : resolveApp('node_modules/cesium-tsunamilab/Source/'),
   nodePaths: nodePaths,
   publicUrl: getPublicUrl(resolveApp('package.json')),
   servedPath: getServedPath(resolveApp('package.json'))

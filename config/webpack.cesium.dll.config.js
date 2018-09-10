@@ -10,7 +10,7 @@ const outputPath = path.join(paths.app, "distdll");
 
 const webpackConfig = {
     entry : {
-        cesiumDll : ["cesium/Source/Cesium.js"],
+        cesiumDll : ["cesium-tsunamilab/Source/Cesium.js"],
     },
     devtool : "#source-map",
     output : {

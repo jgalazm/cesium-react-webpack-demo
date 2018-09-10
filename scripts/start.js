@@ -155,8 +155,8 @@ function onProxyError(proxy) {
 function addMiddleware(devServer) {
 
   // Handle requests for Cesium static assets that we want to
-  // serve up direct from /node_modules/cesium/.
-  devServer.use("/cesium", express.static(paths.cesiumDebugBuild));
+  // serve up direct from /node_modules/cesium-tsunamilab/.
+  devServer.use("/cesium-tsunamilab", express.static(paths.cesiumDebugBuild));
 
   // `proxy` lets you to specify a fallback server during development.
   // Every unrecognized request will be forwarded to it.

@@ -235,7 +235,7 @@ function copyCesium() {
 
     let globOptions = {
         nodir : true,
-        cwd : "node_modules/cesium/Build/Cesium/",
+        cwd : "node_modules/cesium-tsunamilab/Build/Cesium/",
         ignore: ["*Cesium.js", "**/NaturalEarthII/**/*", "**/maki/**/*"]
     };
 
@@ -246,7 +246,7 @@ function copyCesium() {
         // er is an error object or null.
 
         files.forEach(function (srcPath) {
-            let fullSrcPath = path.join("node_modules/cesium/Build/Cesium/", srcPath);
+            let fullSrcPath = path.join("node_modules/cesium-tsunamilab/Build/Cesium/", srcPath);
             let fullDestPath = path.join(outputPath, srcPath);
             fs.copySync(fullSrcPath, fullDestPath);
         });
