@@ -10,9 +10,9 @@ import Material from "cesium-tsunamilab/Source/Scene/Material";
 
 
 
-export default class CesiumBillboard extends Component {
+export default class CesiumRectangle extends Component {
     componentDidMount() {
-        const {billboards, simulationVideo, simulationCanvas} = this.props;
+        const {rectangles, simulationVideo, simulationCanvas} = this.props;
 
         let instance = new GeometryInstance({
             geometry : new RectangleGeometry({
@@ -24,13 +24,13 @@ export default class CesiumBillboard extends Component {
         let stream = simulationCanvas.captureStream();
         simulationVideo.srcObject = stream;
 
-        if(billboards) {
+        if(rectangles) {
 
             var material = Material.fromType('Image');
             material.uniforms.image = simulationVideo;
             
 
-            this.billboard = billboards.add(new Primitive({
+            this.rectangle = rectangles.add(new Primitive({
                 geometryInstances : instance,
                 appearance : new MaterialAppearance({
                     material : material
@@ -41,10 +41,10 @@ export default class CesiumBillboard extends Component {
     }
 
     componentWillUnmount() {
-        const {billboards} = this.props;
+        const {rectangles} = this.props;
 
-        if(billboards && !billboards.isDestroyed() && this.billboard) {
-            billboards.remove(this.billboard);
+        if(rectangles && !rectangles.isDestroyed() && this.rectangle) {
+            rectangles.remove(this.rectangle);
         }
     }
 
