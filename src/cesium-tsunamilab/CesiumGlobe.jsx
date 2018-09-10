@@ -93,7 +93,7 @@ export default class CesiumGlobe extends Component {
     render() {
         const containerStyle = {
             width: '100%',
-            height: '60%',
+            height: '100%',
             display : "flex",
             alignItems : "stretch",
         };

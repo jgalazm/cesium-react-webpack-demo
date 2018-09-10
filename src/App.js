@@ -81,7 +81,8 @@ class App extends Component {
                 <video 
                     autoPlay 
                     muted 
-                    ref={ element => this.simulationVideo = element }>
+                    ref={ element => this.simulationVideo = element }
+                    style={{position:'absolute',top:0, visibility:'hidden'}}>
                 </video> 
                 <canvas ref={ element => this.simulationCanvas = element }></canvas>
 
