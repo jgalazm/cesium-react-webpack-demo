@@ -63,6 +63,8 @@ export default class CesiumGlobe extends Component {
             const {scene} = this.viewer;
             const {icons, labels, polylines, onLeftClick, flyToLocation} = this.props;
 
+            let {simulationCanvas, canvasIsReady, simulationVideo} = this.props;
+
             contents = (
                 <span>
                     <CesiumProjectContents
@@ -70,6 +72,10 @@ export default class CesiumGlobe extends Component {
                         icons={icons}
                         labels={labels}
                         polylines={polylines}
+                        simulationCanvas={simulationCanvas}
+                        canvasIsReady={canvasIsReady}
+                        simulationVideo={simulationVideo}
+
                     />
                     <CesiumClickHandler
                         scene={scene}
@@ -89,7 +95,7 @@ export default class CesiumGlobe extends Component {
     render() {
         const containerStyle = {
             width: '100%',
-            height: '100%',
+            height: '50%',
             display : "flex",
             alignItems : "stretch",
         };

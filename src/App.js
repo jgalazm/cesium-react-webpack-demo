@@ -19,7 +19,6 @@ class App extends Component {
                 {lat : 30.4, lon : -81.6, alt : 20000 },
             ],
         flyToLocation : null,
-        simulationCanvas: undefined,
         canvasIsReady: false
     }
 
@@ -36,7 +35,7 @@ class App extends Component {
     componentDidMount(){
         this.setState({canvasIsReady:true});
     }
-
+    
     render() {
         const {reactLogo, redsLogo, label, line, flyToLocation} = this.state;
 
@@ -64,6 +63,9 @@ class App extends Component {
                     polylines={polylines}
                     onLeftClick={this.handleLeftClick}
                     flyToLocation={flyToLocation}
+                    canvasIsReady={this.state.canvasIsReady}
+                    simulationCanvas={this.simulationCanvas}
+                    simulationVideo={this.simulationVideo}
                 />
                 <div style={{position : "fixed", top : 0}}>
                     <div style={{color : "white", fontSize: 40, }}>
@@ -77,6 +79,7 @@ class App extends Component {
                 {Nami}
                 
                 <canvas ref={ element => this.simulationCanvas = element }></canvas>
+                <video autoPlay muted ref={ element => this.simulationVideo = element }></video>
 
             </div>
         );

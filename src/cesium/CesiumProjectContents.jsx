@@ -43,14 +43,23 @@ export class CesiumProjectContents extends Component {
 
     render() {
         const {icons = [], labels = [], polylines = []} = this.props;
-
-        const renderedBillboards = icons.map( (icon, index) =>
-            <CesiumBillboard
-                {...icon}
-                billboards={this.billboards}
-                key={index}
-            />
-        );
+        let {simulationCanvas, canvasIsReady, simulationVideo} = this.props;
+        if(canvasIsReady){
+            debugger;
+        }
+        let renderedBillboards = null;
+        if( canvasIsReady ){
+            renderedBillboards = icons.map( (icon, index) =>
+                <CesiumBillboard
+                    {...icon}
+                    billboards={this.billboards}
+                    key={index}
+                    simulationCanvas={simulationCanvas}
+                    canvasIsReady={canvasIsReady}
+                    simulationVideo={simulationVideo}
+                />
+            );
+        } 
 
         const renderedLabels = labels.map( (label, index) =>
             <CesiumLabel
