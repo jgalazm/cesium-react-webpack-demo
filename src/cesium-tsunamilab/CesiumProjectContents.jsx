@@ -1,15 +1,18 @@
 import React, {Component} from "react";
 
 import PrimitiveCollection from "cesium-tsunamilab/Source/Scene/PrimitiveCollection";
+import BillboardCollection from "cesium-tsunamilab/Source/Scene/BillboardCollection.js";
 import CesiumRectangle from "./primitives/CesiumRectangle";
+import CesiumBillboard from "./primitives/CesiumBillboard";
 
 export class CesiumProjectContents extends Component {
     constructor(props) {
         super(props);
 
         this.rectangles = new PrimitiveCollection();
+        this.billboards = new BillboardCollection();
 
-        this.primitiveCollections = [this.rectangles];
+        this.primitiveCollections = [this.rectangles, this.billboards];
 
         const {scene} = props;
 
@@ -37,6 +40,7 @@ export class CesiumProjectContents extends Component {
         let {simulationCanvas, canvasIsReady, simulationVideo} = this.props;
 
         let renderedRectangles = null;
+        let renderedBillboards = null;
         if( canvasIsReady ){
             renderedRectangles = <CesiumRectangle
                 rectangles={this.rectangles}
@@ -44,12 +48,15 @@ export class CesiumProjectContents extends Component {
                 canvasIsReady={canvasIsReady}
                 simulationVideo={simulationVideo}
             />
+
+            renderedBillboards = <CesiumBillboard  billboards={this.billboards} />
         
         }
 
         return (
             <span>
                 {renderedRectangles}
+                {renderedBillboards}
             </span>
         );
     }

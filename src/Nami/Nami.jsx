@@ -37,7 +37,7 @@ class NamiView extends Component {
     this.output = {
       stopTime: 30 * 60 * 60 * 0,
       displayOption: 'heights',
-      loop: true
+      loop: false
   };
     this.lifeCycle = {
       dataWasLoaded: (model) => {
@@ -47,7 +47,7 @@ class NamiView extends Component {
       },
       
       modelStepDidFinish: (model, controller) => {
-        if (model.discretization.stepNumber % 1000 == 0) {
+        if (model.discretization.stepNumber % 10 == 0) {
           console.log(model.currentTime/60/60, controller.stopTime/60/60);
           return false;
         }

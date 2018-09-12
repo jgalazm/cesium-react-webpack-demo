@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import CesiumGlobe from "./cesium-tsunamilab/CesiumGlobe";
 import NamiView from './Nami/Nami.jsx';
 
+
+
 class App extends Component {
   state = {
-    flyToLocation: null,
     canvasIsReady: false
   }
 
@@ -25,11 +26,12 @@ class App extends Component {
 
     let Nami = this.state.canvasIsReady ? <NamiView canvas={this.simulationCanvas} /> : null;
 
+
+
+
     return (
       <div style={containerStyle}>
         <CesiumGlobe
-          onLeftClick={this.handleLeftClick}
-          flyToLocation={flyToLocation}
           canvasIsReady={this.state.canvasIsReady}
           simulationCanvas={this.simulationCanvas}
           simulationVideo={this.simulationVideo}

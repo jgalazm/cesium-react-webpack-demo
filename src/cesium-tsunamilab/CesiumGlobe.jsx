@@ -9,9 +9,6 @@ const BING_MAPS_KEY = "ApDPY15x9lCXO5Hw89M1G5Q84_BlKalPbjor8GvKGj2UAnVtzlT5UT-zr
 const STK_TERRAIN_URL = "//assets.agi.com/stk-terrain/world";
 
 import CesiumProjectContents from "./CesiumProjectContents";
-import CesiumClickHandler from "./CesiumClickHandler";
-import CesiumCameraManager from "./CesiumCameraManager";
-
 
 
 export default class CesiumGlobe extends Component {
@@ -61,27 +58,16 @@ export default class CesiumGlobe extends Component {
 
         if(viewerLoaded) {
             const {scene} = this.viewer;
-            const {icons, onLeftClick, flyToLocation} = this.props;
-
             let {simulationCanvas, canvasIsReady, simulationVideo} = this.props;
 
             contents = (
                 <span>
                     <CesiumProjectContents
                         scene={scene}
-                        icons={icons}
                         simulationCanvas={simulationCanvas}
                         canvasIsReady={canvasIsReady}
                         simulationVideo={simulationVideo}
 
-                    />
-                    <CesiumClickHandler
-                        scene={scene}
-                        onLeftClick={onLeftClick}
-                    />
-                    <CesiumCameraManager
-                        camera={scene.camera}
-                        flyToLocation={flyToLocation}
                     />
                 </span>
             );
