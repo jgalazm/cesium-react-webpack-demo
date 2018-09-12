@@ -4,23 +4,7 @@ import './Nami.css';
 import {app} from './lib/Nami.js';
 
 class NamiView extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      simulationIsReady: false
-    }
-
-    // this.simulationCanvas = React.createRef();
-
-    this.niterations = -1;
-
-    this.app;
-
-    
-
-  }
   componentDidMount() {
-
     this.data = {
       bathymetry: '/bathymetry.png',
       bathymetryMetadata: {
@@ -57,26 +41,17 @@ class NamiView extends Component {
   };
     this.lifeCycle = {
       dataWasLoaded: (model) => {
-        /* simulation */
+        
         console.log('data was loaded');
 
       },
+      
       modelStepDidFinish: (model, controller) => {
-        // videoLayer.rectangle.material = model.canvas;
-
         if (model.discretization.stepNumber % 1000 == 0) {
-          // console.log(model.currentTime/60/60, controller.stopTime/60/60);
-        }
-        this.niterations = this.niterations + 1;
-
-        if (this.niterations % 10 == 0) {
-          this.niterations = 0;
+          console.log(model.currentTime/60/60, controller.stopTime/60/60);
           return false;
         }
-        else {
-          return true;
-        }
-
+        return true;
       },
 
       modelSimulationWillStart: (model, controller) => {
@@ -87,6 +62,7 @@ class NamiView extends Component {
         requestAnimationFrame(animate);
       }
     }
+
     this.app = new app(this.data, this.output, this.lifeCycle);
   }
 
